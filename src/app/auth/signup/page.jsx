@@ -2,7 +2,6 @@
 import { authClient } from "@/lib/auth-client";
 import { Check } from "@gravity-ui/icons";
 import { Button, Description, FieldError, Form, Input, Label, TextField } from "@heroui/react";
-import { object } from "better-auth";
 import { toast } from "react-toastify";
 
 
@@ -18,6 +17,9 @@ const signUPPage = () => {
     console.log(error, 'error')
     if(error){
       toast.error(error.message)
+    }
+    if(data){
+      toast.success('successfully create account')
     }
   };
   return (
