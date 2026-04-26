@@ -2,6 +2,7 @@
 import { authClient } from "@/lib/auth-client";
 import { Check } from "@gravity-ui/icons";
 import { Button, Description, FieldError, Form, Input, Label, TextField } from "@heroui/react";
+import { redirect } from "next/navigation";
 import { toast } from "react-toastify";
 
 const page = () => {
@@ -23,6 +24,7 @@ const page = () => {
             }
             if(data){
               toast.success('successfully login')
+              redirect('/')
             }
     }
     return (

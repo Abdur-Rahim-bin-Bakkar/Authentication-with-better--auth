@@ -2,6 +2,7 @@
 import { authClient } from "@/lib/auth-client";
 import { Check } from "@gravity-ui/icons";
 import { Button, Description, FieldError, Form, Input, Label, TextField } from "@heroui/react";
+import { redirect } from "next/navigation";
 import { toast } from "react-toastify";
 
 
@@ -20,6 +21,7 @@ const signUPPage = () => {
     }
     if(data){
       toast.success('successfully create account')
+      redirect('/')
     }
   };
   return (
